@@ -1,95 +1,61 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <div className={styles.landingSection}>
+        <video autoPlay muted loop>
+          <source src="/videos/bg_1.mp4" type="video/mp4" />
+        </video>
+        <div className={styles.headerSection}>
+          <div className={styles.logo}>
+            <img src="/icons/logo.svg" alt="Uni Cards" />
+          </div>
+          <div className={styles.payCheckButton}>Uni Paycheck</div>
+        </div>
+        <div className={styles.bodySection}>
+          <div className={styles.bodyLeftWrapper}>
+            <div className={styles.primaryText}>
+              <strong>NX Wave.</strong> The next-gen credit card for those who
+              love rewards.
+            </div>
+            <div className={styles.secondaryText}>
+              <span>1% Cashback</span>
+              <span>
+                <img src="/icons/plus.svg" alt="Plus" />
+              </span>
+              <span>5x Rewards</span>
+              <span>
+                <img src="/icons/plus.svg" alt="Plus" />
+              </span>
+              <span>Zero Forex Markup</span>
+            </div>
+            <div className={styles.applyField}>
+              <div className={styles.inputForm}>
+                <div className={styles.applyFieldInput}>
+                  <input type="text" placeholder="Enter Phone Number" />
+                </div>
+                <div className={styles.applyButton}>Apply Now</div>
+              </div>
+            </div>
+            <div className={styles.tnCCheckBox}>
+              <div className={styles.checkBoxContainer}>
+                <input type="checkbox" checked={true} />
+              </div>
+              <div className={styles.tnCText}>
+                You agree to be contacted by Uni Cards over Call, SMS, Email or
+                WhatsApp to guide you through your application.
+              </div>
+            </div>
+          </div>
+          <div className={styles.bodyRightWrapper}>
+            <div className={styles.cardImage}>
+              <img src="/images/uni_cards.png" alt="Uni Cards" />
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
-  )
+  );
 }

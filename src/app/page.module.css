@@ -155,3 +155,63 @@
   height: 100%;
   width: 100%;
 }
+
+
+@media screen and (max-aspect-ratio: 13/9) {
+  .logo{
+    height: calc(3 * 3vh);
+    width: calc(4 * 3vh);
+  }
+
+  .bodySection{
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .bodyRightWrapper{
+    align-self: flex-start;
+    margin-left: 5vw;
+    margin-top: 5vh;
+  }
+
+  .cardImage{
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .primaryText{
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+
+  .secondaryText{
+    font-size: 0.75rem;
+  }
+
+  .tnCCheckBox{
+    display: none;
+  }
+
+  .applyFieldInput{
+    display: none;
+  }
+
+  .applyField{
+    padding: 0;
+  }
+
+  .inputForm{
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    margin-left: 5vw;
+  }
+
+  .applyButton{
+    padding-left: 5vw;
+  }
+
+  .payCheckButton{
+    display: none;
+  }
+}
